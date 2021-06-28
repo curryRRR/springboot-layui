@@ -5,7 +5,7 @@
 <mapper namespace="com.imust.layui.mapper.OrderMapper">
 
 
-    <!-- 删除订单信息，需要分步删除，先删除从表的数据，再删除主表 -->
+    <!-- 删除订单信息，需要分步删除，先删除从表的数据，再删除主表数据 -->
     <delete id="removeById">
         delete from t_order_item where order_id = #{orderId} ;
         delete from t_order where order_id = #{orderId}
